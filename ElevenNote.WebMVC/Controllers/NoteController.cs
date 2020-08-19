@@ -88,6 +88,24 @@ namespace ElevenNote.WebMVC.Controllers
             ModelState.AddModelError("", "Your note could not be updated.");
             return View();
         }
+        //GET : Delete
+        public ActionResult Delete(int id)
+        {
+            var service = CreateNoteService();
+            var model = service.GetNoteById(id);
+            return View(model);
+        }
+        //Post : Delete
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateNoteService();
+            service.DeleteNote(id);
+            TempData["SaveResult"] = "Your note was delete captain.";
+            return RedirectToAction("Index");
+        }
+        //NoteService Access Method
         private NoteService CreateNoteService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
