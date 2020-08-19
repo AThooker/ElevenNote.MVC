@@ -1,6 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url(../NoteWall.jpg);
+}
+.jumbotron {
+    background-color: darkgray;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+.row {
+    background-color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,10 +25,41 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+hr {
+    border: 3px solid black;
+}
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+footer {
+    background-color: grey;
+    text-align: center;
+}
+
+
+/* Note Index page */
+.table {
+    background-color: antiquewhite;
+}
+h2 {
+    font-weight: bold;
+    font-size: 72px;
+    background-color: cadetblue;
+    width: 190px;
+    border-radius: 12px;
+}
+.pageLink {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: grey;
+    width: 190px;
+    text-align: center;
+}
+.pageLink:visited {
+    color: black;
 }
